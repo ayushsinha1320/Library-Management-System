@@ -6,4 +6,8 @@ public class Person {
     public Person(String name){
         this.name = name;
     }
+
+    public String get_details(){
+        return "Name: " + name;
+    }
 }

@@ -4,6 +4,11 @@ public class Librarian extends Person{
     private final String employee_id;
     private final Library library;
 
+    @Override
+    public String get_details(){
+        return "Name: " + name + " Employee ID: " + employee_id;
+    }
+
     public Librarian(String name, String employee_id) {
         super(name);
         this.employee_id = employee_id;
