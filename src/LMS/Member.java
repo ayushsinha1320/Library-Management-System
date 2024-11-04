@@ -22,4 +22,13 @@ public class Member {
     public void borrow_book(Book book){
         borrowed_books.add(book);
     }
+
+    public void return_book(Book book){
+        if (borrowed_books.contains(book)) {
+            borrowed_books.remove(book);
+            System.out.println("Book returned successfully.");
+        } else {
+            System.out.println("Book not found in borrowed list.");
+        }
+    }
 }
