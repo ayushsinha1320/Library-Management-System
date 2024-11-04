@@ -1,19 +1,13 @@
 package LMS;
 
-public class Librarian {
-    private final String name;
+public class Librarian extends Person{
     private final String employee_id;
-    private Library library;
+    private final Library library;
 
     public Librarian(String name, String employee_id) {
-        this.name = name;
+        super(name);
         this.employee_id = employee_id;
         library = new Library();
-    }
-
-    public Librarian() {
-        name = "NO NAME PROVIDED";
-        employee_id = "NO EMPLOYEE_ID PROVIDED";
     }
 
     public void add_book(Book book){

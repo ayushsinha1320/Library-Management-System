@@ -3,27 +3,21 @@ package LMS;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Member {
-    private final String name;
+public class Member extends Person{
     private final String member_id;
-    private List<Book> borrowed_books;
+    private final List<Book> borrowed_books;
 
     public String getMember_id() {
         return member_id;
     }
 
-    public Member() {
-        name = "NO NAME PROVIDED";
-        member_id = "NIL";
-    }
-
     public Member(String name, String member_id, List<Book> books) {
-        this.name = name;
+        super(name);
         this.member_id = member_id;
         borrowed_books = books;
     }
     public Member(String name, String member_id) {
-        this.name = name;
+        super(name);
         this.member_id = member_id;
         this.borrowed_books = new ArrayList<>();
     }
