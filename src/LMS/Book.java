@@ -6,14 +6,6 @@ public class Book {
     private final String ISBN;
     private int copies;
 
-    public Book() {
-        title = "NO TITLE PROVIDED";
-        author = "NO AUTHOR NAME PROVIDED";
-        ISBN = "NO ISBN";
-        copies = 0;
-    }
-
-
     public Book(String title, String author, String ISBN, int copies) {
         this.title = title;
         this.author = author;
@@ -41,9 +33,5 @@ public class Book {
 
     public void return_book(){
         copies++;
-    }
-
-    public void setCopies(int copies) {
-        this.copies = copies;
     }
 }

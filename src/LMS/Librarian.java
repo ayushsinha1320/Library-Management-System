@@ -1,7 +1,5 @@
 package LMS;
 
-import java.util.Map;
-
 public class Librarian {
     private final String name;
     private final String employee_id;
@@ -27,8 +25,6 @@ public class Librarian {
     }
 
     public void viewInventory() {
-        for (Map.Entry<String, Book> entry : library.getBooks().entrySet()) {
-            System.out.println(entry.getValue().toString());
-        }
+        library.list_all_books();
     }
 }
