@@ -32,9 +32,11 @@ public class Book {
     public void borrow_book(){
         if(copies > 0){
             copies--;
-        }else{
-            System.out.println("No copies available");
         }
+    }
+
+    public String getISBN() {
+        return ISBN;
     }
 
     public void return_book(){

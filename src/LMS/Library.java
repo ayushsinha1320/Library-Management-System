@@ -17,4 +17,38 @@ public class Library {
         this.members = new HashMap<>(members);
     }
 
+    public Map<String, Book> getBooks(){
+        return books;
+    }
+
+    public void register_member(Member member){
+        members.put(member.getMember_id(),member);
+    }
+
+    public void issue_book(String member_id,String book_isbn){
+        Member member = members.get(member_id);
+        Book book = books.get(book_isbn);
+
+        if(book.is_available()) {
+            book.borrow_book();
+            member.borrow_book(book);
+        }
+    }
+
+    public void receive_book(String member_id,String book_isbn){
+        Member member = members.get(member_id);
+        Book book = books.get(book_isbn);
+
+        if(book.is_available()){
+            book.return_book();
+            member.return_book(book);
+        }
+    }
+
+    public void list_all_books(){
+        for(Book book : books.values()) {
+            System.out.println(book.toString());
+        }
+    }
+
 }

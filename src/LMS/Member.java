@@ -8,6 +8,10 @@ public class Member {
     private final String member_id;
     private List<Book> borrowed_books= new ArrayList<Book>();
 
+    public String getMember_id() {
+        return member_id;
+    }
+
     public Member() {
         name = "NO NAME PROVIDED";
         member_id = "NIL";
