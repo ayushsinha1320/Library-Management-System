@@ -1,6 +1,6 @@
 package LMS;
 
-public class Book {
+public class Book implements Borrowable{
     private final String title;
     private final String author;
     private final String ISBN;
