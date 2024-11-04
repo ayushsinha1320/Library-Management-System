@@ -18,4 +18,8 @@ public class Member {
         this.member_id = member_id;
         borrowed_books = books;
     }
+
+    public void borrow_book(Book book){
+        borrowed_books.add(book);
+    }
 }
