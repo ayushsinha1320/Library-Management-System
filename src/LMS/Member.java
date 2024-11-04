@@ -31,4 +31,10 @@ public class Member {
             System.out.println("Book not found in borrowed list.");
         }
     }
+
+    public void list_borrowed_books(){
+        for(Book book: borrowed_books){
+            System.out.println(book.get_details());
+        }
+    }
 }
