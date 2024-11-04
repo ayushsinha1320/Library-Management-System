@@ -6,7 +6,7 @@ import java.util.List;
 public class Member {
     private final String name;
     private final String member_id;
-    private List<Book> borrowed_books= new ArrayList<Book>();
+    private List<Book> borrowed_books;
 
     public String getMember_id() {
         return member_id;
@@ -21,6 +21,11 @@ public class Member {
         this.name = name;
         this.member_id = member_id;
         borrowed_books = books;
+    }
+    public Member(String name, String member_id) {
+        this.name = name;
+        this.member_id = member_id;
+        this.borrowed_books = new ArrayList<>();
     }
 
     public void borrow_book(Book book){
