@@ -7,6 +7,11 @@ public class Member extends Person{
     private final String member_id;
     private final List<Book> borrowed_books;
 
+    @Override
+    public String get_details(){
+        return "Name: " + name + " Member ID: " + member_id;
+    }
+
     public String getMember_id() {
         return member_id;
     }
